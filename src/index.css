@@ -9,25 +9,26 @@ html {
 }
 
 body {
-  @apply bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 h-[200vh];
+  @apply bg-[#F2F2F2] text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50;
+  font-family: 'Inter', sans-serif;
 }
 
 /*TYPOGRAPHY*/
 
-.headline-1 {
-  @apply max-w-max bg-gradient-to-r from-zinc-800 to-zinc-400 dark:from-zinc-50 dark:to-zinc-400 bg-clip-text text-transparent;
+.display-text {
+  @apply font-display italic tracking-tighter text-blue-600;
 }
 
 .headline-1 {
-  @apply text-5xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.15] ;
+  @apply text-5xl leading-none font-black uppercase tracking-tighter lg:text-[110px];
 }
 
 .headline-2 {
-  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold; 
+  @apply text-4xl lg:text-7xl leading-none font-black uppercase tracking-tighter; 
 }
 
 .title-1 {
-  @apply text-[22px] font-normal;
+  @apply text-2xl font-bold tracking-tight uppercase;
 }
 
 /*UTILITIES*/
@@ -38,19 +39,19 @@ body {
 }
 
 .container {
-  @apply px-4 mx-auto lg:px-8 xl:max-w-6xl;
+  @apply px-4 mx-auto lg:px-8 xl:max-w-[1280px];
 }
 
 .img-box {
-  @apply bg-zinc-200 dark:bg-zinc-700 overflow-hidden;
+  @apply bg-zinc-200 dark:bg-zinc-800 overflow-hidden;
 }
 
 .img-cover {
-  @apply w-full h-full object-fill;
+  @apply w-full h-full object-cover;
 }
 
 .section {
-  @apply pt-20 lg:pt-32;
+  @apply pt-20 lg:pt-32 pb-10;
 }
 
 .reveal-up {
@@ -62,67 +63,63 @@ body {
 /*Menu btn*/
 
 .menu-btn {
-  @apply w-10 h-10 text-zinc-900 dark:text-zinc-50 grid place-items-center bg-zinc-900/10 dark:bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-900/5 dark:ring-zinc-50/[0.02] backdrop-blur-2xl hover:bg-zinc-900/20 dark:hover:bg-zinc-50/15 transition-[transform,background-color] active:scale-95;
+  @apply w-10 h-10 text-zinc-950 dark:text-zinc-50 grid place-items-center bg-transparent rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors active:scale-95;
 }
 
 /*Navbar*/
 
 .navbar {
-  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-100/90 dark:bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-900/5 dark:ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-2xl;
+  @apply absolute top-full mt-2 right-0 min-w-40 p-4 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-xl scale-90 isolate opacity-0 invisible transition-all md:static md:flex md:items-center md:px-2 md:py-0 md:mt-0 md:opacity-100 md:visible md:scale-100 md:border-none md:shadow-none md:bg-transparent md:dark:bg-transparent;
 }
 
 .navbar.active {
-  @apply opacity-100 scale-100 blur-0 visible;
+  @apply opacity-100 scale-100 visible;
 }
 
 .nav-link {
-  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-600 dark:text-zinc-50/50 hover:text-zinc-950 dark:hover:text-zinc-50 transition-colors;
+  @apply flex items-center h-10 px-4 text-sm font-semibold tracking-wide text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-zinc-50 transition-colors;
 }
 
 .nav-link.active {
-  @apply text-zinc-50 dark:text-zinc-900 duration-500;
+  @apply text-zinc-950 dark:text-zinc-50;
 }
 
-.navbar .active-box{
-  @apply absolute bg-zinc-900 dark:bg-zinc-50 rounded-lg -z-10 transition-[top,left] duration-500;
+.navbar .active-box {
+  @apply md:hidden;
 }
 
 /*Button*/
 
 .btn {
-  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 ring-zinc-900/10 dark:ring-zinc-50/5 ring-inset transition-[background-color];
+  @apply inline-flex items-center justify-center gap-2 px-6 h-12 rounded-full font-bold text-sm tracking-wide uppercase transition-all;
 }
 
 .btn-secondary {
-  @apply bg-zinc-900 text-zinc-50 active:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-900 dark:active:bg-zinc-50/80;
+  @apply bg-zinc-950 text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
+}
+
+.btn-outline {
+  @apply bg-transparent ring-2 ring-inset ring-zinc-950 text-zinc-950 hover:bg-zinc-200 dark:ring-white dark:text-white dark:hover:bg-zinc-800;
 }
 
 .btn .material-symbols-rounded {
   @apply text-[18px];
 }
 
-.btn:has( .material-symbols-rounded) {
-  @apply pr-3;
-}
-
-.btn-primary {
-  @apply h-11 bg-sky-400 text-zinc-950 hover:bg-sky-300 active:bg-sky-400;
-}
-
-.btn-outline {
-  @apply h-11 bg-zinc-200 hover:bg-zinc-300 active:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:active:bg-zinc-800 text-zinc-900 dark:text-zinc-50
-}
-
 /*TEXT*/
 
 .label {
-  @apply block text-zinc-700 dark:text-zinc-200 text-sm font-normal mb-2;
+  @apply block text-zinc-950 dark:text-zinc-50 text-sm font-bold uppercase mb-2;
 }
 
 .text-field {
-  @apply block outline-none w-full px-3 py-3 text-sm bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50 rounded-xl ring-1 ring-inset ring-transparent transition-shadow hover:ring-zinc-900/10 dark:hover:ring-zinc-50/5 focus:ring-sky-400 focus:ring-2
+  @apply block outline-none w-full px-4 py-4 text-base bg-white dark:bg-zinc-900 text-zinc-950 dark:text-zinc-50 rounded-2xl border-2 border-zinc-200 dark:border-zinc-800 transition-all focus:border-blue-600 dark:focus:border-blue-600;
 }
 
 .text-field::placeholder {
-  @apply text-zinc-500 dark:text-zinc-400;
+  @apply text-zinc-400 dark:text-zinc-600;
 }
