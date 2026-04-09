@@ -14,18 +14,18 @@ const Hero = () => {
                     <figure className="img-box w-9 h-9 rounded-lg">
                         <img src={Avatar} width={40} height={40} alt="Carlos Couste" className="image-cover" />
                     </figure>
-                    <div className="flex items-center gap-1.5 tex-zinc-400 text-sm tracking-wide">
+                    <div className="flex items-center gap-1.5 text-zinc-600 dark:text-zinc-400 text-sm tracking-wide">
                         <span className="relative w-2 h-2 rounded-full bg-emerald-400">
                             <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
                         </span>
                         Disponible
                     </div>
                 </div>
-                <h2 className="headline-1 max-w-[15ch] sm:max-w-20ch lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">Apasionado por la programación y el diseño web</h2>
+                <h1 className="headline-1 max-w-[15ch] sm:max-w-20ch lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">Apasionado por la programación y el diseño web</h1>
                 <div className="flex items-center gap-3">
-                    <ButtonPrimary  href={CV} target="_blank" label="Descargar CV" icon="download" />
+                    <ButtonPrimary  href={CV} target="_blank" rel="noopener noreferrer" label="Descargar CV" icon="download" />
 
-                    <ButtonOutline href="#about"label="Desplácese hacia abajo" icon="arrow_downward"/>
+                    <ButtonOutline href="#about" label="Desplácese hacia abajo" icon="arrow_downward"/>
                 </div>
             </div>
             <div className="hidden lg:block ">

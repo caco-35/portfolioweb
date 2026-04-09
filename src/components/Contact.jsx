@@ -38,10 +38,10 @@ const Contact = () => {
         <div className="container lg:grid lg:grid-cols-2 lg:items-stretch">
             <div className="mb-12 lg:mb-0 lg:flex lg:flex-col ">
                 <h2 className="headline-2 lg:max-w-[12ch] reveal-up">Contáctame para colaborar.</h2>
-                <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up">¡Comuníquese hoy para analizar las necesidades de su proyecto y comenzar a colaborar en algo increíble!</p>
+                <p className="text-zinc-600 dark:text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up">¡Comuníquese hoy para analizar las necesidades de su proyecto y comenzar a colaborar en algo increíble!</p>
                 <div className="flex items-center gap-2 mt-auto">
                     {socialLinks.map(({ href, icon }, key) => (
-                        <a key={key} href={href} target="_blank" className="w-12 h-12 grid place-items-center ring-inset -ring-2 ring-zinc-50/5 rounded-lg transition-[background-color,color] hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-50/80 reveal-up">{icon}</a>
+                        <a key={key} href={href} target="_blank" rel="noopener noreferrer" className="w-12 h-12 grid place-items-center ring-inset ring-2 ring-zinc-900/10 dark:ring-zinc-50/5 rounded-lg transition-[background-color,color] hover:bg-zinc-900 hover:text-zinc-50 dark:hover:bg-zinc-50 dark:hover:text-zinc-950 active:bg-zinc-800 dark:active:bg-zinc-50/80 reveal-up">{icon}</a>
                     ))}
                 </div>
             </div>
